@@ -127,7 +127,7 @@
                     android:src="@drawable/star" />
 
                 <TextView
-                    android:id="@+id/textView20"
+                    android:id="@+id/scoredetailTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -151,7 +151,7 @@
                     android:src="@drawable/review" />
 
                 <TextView
-                    android:id="@+id/textView22"
+                    android:id="@+id/numberreviewdetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -175,7 +175,7 @@
                 android:background="@color/grey"/>
 
             <TextView
-                android:id="@+id/textView24"
+                android:id="@+id/itemdescriptiontxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -184,7 +184,7 @@
                 android:text="Immerse yourself in a world of vibrant visuals and immersive sound with the VisionX Pro LED TV. Its cutting-edge LED technology brings every scene to life with striking clarity and rich colors. With seamless integration and a sleek, modern design, the VisionX Pro is not just a TV, but a centerpiece for your entertainment space. With its sleek, modern design, the VisionX Pro is not just a TV, but a centerpiece for your entertainment space. The ultra-slim bezel and premium finish blend seamlessly with any decor" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button"
+                android:id="@+id/buybtn"
                 style="@android:style/Widget.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
