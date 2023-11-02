@@ -1,10 +1,11 @@
 package com.app.apnadukanapp;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import com.app.apnadukanapp.Adapters.PopularAdapter;
 import com.app.apnadukanapp.Models.PopularModel;
@@ -22,6 +23,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         initRecyclerView();
+        bottomNavigation();
+    }
+
+    private void bottomNavigation() {
+        binding.explorerLayout.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, MainActivity.class)));
+        binding.cartLayout.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, CartActivity.class)));
     }
 
     private void initRecyclerView(){

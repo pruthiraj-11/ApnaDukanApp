@@ -341,11 +341,13 @@
             app:fabCradleVerticalOffset="6dp">
 
             <LinearLayout
+                android:id="@+id/navigationLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/explorerLayout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25"
@@ -366,12 +368,13 @@
                         android:id="@+id/textView14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Explore"
                         android:textAlignment="center"
-                        android:textColor="@color/green"
-                        android:text="Explore" />
+                        android:textColor="@color/green" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/wishListLayout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25"
@@ -392,11 +395,12 @@
                         android:id="@+id/textView15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Wishlist" />
+                        android:text="Wishlist"
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/cartLayout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25"
@@ -417,11 +421,12 @@
                         android:id="@+id/textView17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Cart" />
+                        android:text="Cart"
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/profileLayout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25"
@@ -442,19 +447,11 @@
                         android:id="@+id/textView18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Profile" />
+                        android:text="Profile"
+                        android:textAlignment="center" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.bottomappbar.BottomAppBar>
 
-<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:backgroundTint="@color/orange"-->
-<!--            android:src="@drawable/float_icon"-->
-<!--            android:tint="@color/white"-->
-<!--            app:layout_anchor="@id/appbar"-->
-<!--            app:maxImageSize="30dp" />-->
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

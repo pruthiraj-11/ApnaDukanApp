@@ -39,4 +39,26 @@ public class CartManagement {
     public ArrayList<PopularModel> getListCart(){
         return tinyDB.getListObject("CartList");
     }
+    public double getTotalFee(){
+        ArrayList<PopularModel> list=getListCart();
+        double fee=0;
+        for (int i=0;i< list.size();i++){
+            fee+=(list.get(i).getPrice()*list.get(i).getNumberInCart());
+        }
+        return fee;
+    }
+    public void minusNumberItem(ArrayList<PopularModel> list,int position,ItemNumberChangeListener listener){
+        if (list.get(position).getNumberInCart()==1){
+            list.remove(position);
+        } else {
+            list.get(position).setNumberInCart(list.get(position).getNumberInCart()-1);
+        }
+        tinyDB.putListObject("CartList",list);
+        listener.change();
+    }
+    public void plusNumberItem(ArrayList<PopularModel> list,int position,ItemNumberChangeListener listener){
+        list.get(position).setNumberInCart(list.get(position).getNumberInCart()+1);
+        tinyDB.putListObject("CartList",list);
+        listener.change();
+    }
 }

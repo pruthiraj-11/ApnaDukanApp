@@ -22,12 +22,10 @@ import java.util.ArrayList;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.viewHolder> {
     ArrayList<PopularModel> list;
-    DecimalFormat decimalFormat;
     Context context;
 
     public PopularAdapter(ArrayList<PopularModel> list) {
         this.list = list;
-        decimalFormat=new DecimalFormat("###,###,###,###");
     }
 
     @NonNull
@@ -41,7 +39,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.viewHold
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         holder.textView.setText(list.get(position).getTitle());
-        holder.textView2.setText("$"+""+list.get(position).getPicURL());
+        holder.textView2.setText("$"+list.get(position).getPrice());
         holder.textView3.setText(""+list.get(position).getScore());
 
         int drawableResourceId=holder.itemView.getResources().getIdentifier(list.get(position).getPicURL(),"drawable",holder.itemView.getContext().getPackageName());
