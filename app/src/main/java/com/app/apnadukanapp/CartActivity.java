@@ -22,8 +22,8 @@ public class CartActivity extends AppCompatActivity {
         binding=ActivityCartBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        cartManagement=new CartManagement(this);
         binding.cartBackButton.setOnClickListener(view -> finish());
-        setVariable();
         calculateCart();
         initRecyclerView();
     }
@@ -55,8 +55,4 @@ public class CartActivity extends AppCompatActivity {
         binding.cartItemDeliveryPrice.setText("$"+delivery);
         binding.cartItemTotalCost.setText(""+total);
     }
-
-    private void setVariable() {
-    }
-
 }
